@@ -69,8 +69,7 @@ const flags = {
 
 const commands = {
 	help: { desc: `Print help info` },
-	'--help': { desc: `Print help info` },
-	'-h': { desc: `Print help info` }
+	'--help': { desc: `Print help info` }
 };
 
 const helpText = meowHelp({
