@@ -1,3 +1,6 @@
+<a href="https://github.com/Nisaju/react-command" target="\_parent">
+<img alt="" src="https://img.shields.io/github/stars/Nisaju/react-command.svg?style=social&label=Star" />
+
 # React Command
 
 CLI for generate React and Next.js File with ease

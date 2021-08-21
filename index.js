@@ -68,7 +68,6 @@ const { clear, debug } = flags;
 	);
 
 	const templateFilepath = path.join(
-		process.cwd(),
 		'templates',
 		page ? 'pages' : 'components',
 		folder,
