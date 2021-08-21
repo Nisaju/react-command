@@ -17,6 +17,7 @@ const init = require('./utils/init');
 const cli = require('./utils/cli');
 const log = require('./utils/log');
 const output = require('./utils/output');
+const { generateIndexComponent } = require('./utils/generateIndexComponent');
 
 const input = cli.input;
 const flags = cli.flags;
@@ -38,23 +39,21 @@ const { clear, debug } = flags;
 
 	init({ clear });
 	input.includes(`help`) && cli.showHelp(0);
-	input.includes(`--help`) && cli.showHelp(1);
-	input.includes(`-h`) && cli.showHelp(2);
 
 	const name = flags.name || flags.n || null;
 	const extension = flags.extension || flags.e || null;
 	const page = flags.page;
 	const root = flags.root || flags.r || undefined;
 
-	if (!['js', 'jsx', 'ts', 'tsx'].includes(extension)) {
-		output.error({
-			title: 'Extension only can be "js" | "jsx" | "ts" | "tsx"'
+	if (!name) {
+		return output.error({
+			title: 'GIVE ME NAME!!!'
 		});
 	}
 
-	if (!name) {
-		output.error({
-			title: 'GIVE ME NAME!!!'
+	if (!['js', 'jsx', 'ts', 'tsx'].includes(extension)) {
+		return output.error({
+			title: 'Extension only can be "js" | "jsx" | "ts" | "tsx"'
 		});
 	}
 
@@ -100,6 +99,16 @@ const { clear, debug } = flags;
 
 	fs.writeFileSync(filepath, file, {
 		encoding: 'utf8'
+	});
+
+	generateIndexComponent({
+		dir: __dirname,
+		page,
+		folder,
+		extension,
+		name,
+		flags,
+		root
 	});
 
 	debug && log(flags);
