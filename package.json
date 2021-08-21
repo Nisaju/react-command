@@ -8,13 +8,19 @@
 		"rc": "index.js"
 	},
 	"author": {
-		"name": "anjianto",
+		"name": "Anjianto",
 		"email": "anjianto06@gmail.com",
 		"url": "https://github.com/anjianto"
 	},
+	"repository": {
+		"type": "git",
+		"url": "git@github.com-nisaju:Nisaju/react-command.git"
+	},
 	"keywords": [
 		"react-command",
-		"anjianto"
+		"react",
+		"cli",
+		"rc"
 	],
 	"files": [
 		"index.js",
