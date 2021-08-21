@@ -1,0 +1,44 @@
+{
+	"name": "react-command",
+	"description": "CLI for generate React and Next.js File with ease",
+	"version": "0.1.0",
+	"license": "MIT",
+	"bin": {
+		"react-command": "index.js",
+		"rc": "index.js"
+	},
+	"author": {
+		"name": "anjianto",
+		"email": "anjianto06@gmail.com",
+		"url": "https://github.com/anjianto"
+	},
+	"keywords": [
+		"react-command",
+		"anjianto"
+	],
+	"files": [
+		"index.js",
+		"utils"
+	],
+	"scripts": {
+		"format": "prettier --write \"./**/*.{js,json}\""
+	},
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"cli-alerts": "^1.2.2",
+		"cli-handle-error": "^4.4.0",
+		"cli-handle-unhandled": "^1.1.1",
+		"cli-meow-help": "^2.0.2",
+		"cli-welcome": "^2.2.2",
+		"meow": "^9.0.0",
+		"next": "^11.1.0",
+		"pascalcase": "^1.0.0",
+		"react": "^17.0.2",
+		"react-dom": "^17.0.2",
+		"shelljs": "^0.8.4"
+	},
+	"devDependencies": {
+		"@types/react": "^17.0.19",
+		"prettier": "^2.3.2"
+	}
+}
