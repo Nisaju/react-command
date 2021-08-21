@@ -28,7 +28,7 @@
 		"templates"
 	],
 	"scripts": {
-		"format": "prettier --write \"./**/*.{js,json}\""
+		"format": "prettier --write \". /**/*.{ts,tsx,jsx,js,json}\""
 	},
 	"dependencies": {
 		"chalk": "^4.1.2",
