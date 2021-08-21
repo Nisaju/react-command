@@ -1,7 +1,7 @@
 {
 	"name": "react-command",
 	"description": "CLI for generate React and Next.js File with ease",
-	"version": "0.2.0",
+	"version": "0.3.0",
 	"license": "MIT",
 	"bin": {
 		"react-command": "index.js",

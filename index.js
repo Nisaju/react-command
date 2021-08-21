@@ -67,11 +67,14 @@ const { clear, debug } = flags;
 		`${pascalcase(name)}.${extension}`
 	);
 
-	const templateFilepath = path.join(
-		'templates',
-		page ? 'pages' : 'components',
-		folder,
-		`${next || react}.${extension}`
+	const templateFilepath = path.resolve(
+		__dirname,
+		path.join(
+			'templates',
+			page ? 'pages' : 'components',
+			folder,
+			`${next || react}.${extension}`
+		)
 	);
 
 	if (fs.existsSync(filepath) && !(flags.force || flags.f)) {
